@@ -1,9 +1,8 @@
 import "./App.css";
 import CardList from "../CardList/CardList";
-import { useState } from "react";
 
 function App() {
-  const [data, setData] = useState([
+  const data = [
     {
       id: 1,
       caption: "Сказочное заморское яство",
@@ -40,7 +39,7 @@ function App() {
       selected: false,
       available: false,
     },
-  ]);
+  ];
 
   return (
     <div className="app">
