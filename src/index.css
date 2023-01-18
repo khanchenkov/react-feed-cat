@@ -1,13 +1,53 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* reset(start) */
+body,
+p,
+ul,
+h1,
+h2,
+h3 {
+  margin: 0px;
+  padding: 0px;
 }
+* {
+  box-sizing: border-box;
+}
+/* reset(end) */
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* font(start) */
+@font-face {
+  font-family: "Exo Thin";
+  src: url("./assets/font/Exo2.0-Thin.otf") format("opentype");
+}
+/* font(end) */
+
+/* vars */
+:root {
+  --white: #ffffff;
+  --white-bg: #f2f2f2;
+  --black: #000000;
+  --light-gray: #b3b3b3;
+  --dark-gray: #666666;
+  --blue: #1698d9;
+  --light-blue: #2ea8e6;
+  --red: #d91667;
+  --light-red: #e52e7a;
+  --yellow: #ffff66;
+  --fz-header: 36px;
+  --fz-default: 16px;
+  --fz-title: 48px;
+  --fz-subtitle: 24px;
+  --ff-exo: "Exo Thin";
+}
+/* vars */
+
+body {
+  font-family: "Trebuchet MS", sans-serif;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("./assets//img/background-pattern.png");
+  background-size: contain;
 }

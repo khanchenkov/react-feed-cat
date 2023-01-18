@@ -1,0 +1,220 @@
+.card {
+  width: 320px;
+  cursor: pointer;
+}
+.card__background {
+  height: 436px;
+  width: 100%;
+  margin: 0 0 14px;
+  background: #fff;
+  border-radius: 0px 0px 12px 12px;
+}
+
+/* hover effect */
+.card:hover .card__caption {
+  border-top: 4px solid var(--light-blue);
+  border-right: 4px solid var(--light-blue);
+}
+.card:hover .card__caption::before {
+  border-top: 6px solid var(--light-blue);
+  border-left: 4px solid var(--light-blue);
+}
+.card:hover .card__product {
+  border-bottom: 4px solid var(--light-blue);
+  border-left: 4px solid var(--light-blue);
+  border-right: 4px solid var(--light-blue);
+}
+.card:hover .product__weight {
+  background-color: var(--light-blue);
+}
+.card:hover .card__desc span {
+  color: var(--light-blue);
+  border-bottom: 1px dashed var(--light-blue);
+}
+/* hover effects */
+
+.card__caption {
+  position: relative;
+  height: 54px;
+  width: 272px;
+  color: var(--dark-gray);
+  border-radius: 0 12px 0 0;
+  border-top: 4px solid var(--blue);
+  border-right: 4px solid var(--blue);
+  background: var(--white-bg);
+  padding: 22px 0 0 5px;
+  margin-left: auto;
+}
+.card__caption::before {
+  position: absolute;
+  content: "";
+  top: -5px;
+  left: -48px;
+  height: 50px;
+  width: 45px;
+  border-top: 6px solid var(--blue);
+  border-left: 4px solid var(--blue);
+  border-radius: 0 2px 0 0;
+  background-color: var(--white-bg);
+  transform: skewY(-45deg);
+  transform-origin: top right;
+}
+.card__desc {
+  color: var(--white);
+  font-size: 13px;
+  text-align: center;
+}
+.card__desc span {
+  color: var(--blue);
+  border-bottom: 1px dashed var(--blue);
+  cursor: pointer;
+}
+.product {
+  position: relative;
+  height: 436px;
+  background: url("../../assets/img/cat.png"), var(--white-bg);
+  background-repeat: no-repeat;
+  background-position: 50% 230%;
+  border-bottom: 4px solid var(--blue);
+  border-left: 4px solid var(--blue);
+  border-right: 4px solid var(--blue);
+  border-radius: 0 0 12px 12px;
+  padding: 0 0 0 48px;
+}
+.product__title {
+  font-size: var(--fz-title);
+  color: var(--black);
+}
+.product__taste {
+  font-size: var(--fz-subtitle);
+  font-weight: bold;
+  color: var(--black);
+  margin-bottom: 15px;
+}
+.product__rations,
+.product__bonus,
+.product__extra {
+  font-size: 14px;
+  color: var(--light-gray);
+  margin-bottom: 2px;
+}
+.product__weight {
+  position: absolute;
+  padding: 2%;
+  right: 16px;
+  bottom: 16px;
+  background-color: var(--blue);
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  text-align: center;
+  color: var(--white);
+}
+.product__weight p {
+  font-size: 42px;
+  margin-bottom: -5px;
+}
+.product__weight span {
+  font-size: 21px;
+}
+
+/* selected */
+.card.selected .card__caption {
+  border-top: 4px solid var(--red);
+  border-right: 4px solid var(--red);
+}
+.card.selected .card__caption::before {
+  border-top: 6px solid var(--red);
+  border-left: 4px solid var(--red);
+}
+.card.selected .card__product {
+  border-bottom: 4px solid var(--red);
+  border-left: 4px solid var(--red);
+  border-right: 4px solid var(--red);
+}
+.card.selected .product__weight {
+  background-color: var(--red);
+}
+.card__caption.mouse-left span {
+  color: var(--light-red);
+}
+
+/* selected hover effect */
+.card.selected.mouse-left .card__caption {
+  border-top: 4px solid var(--light-red);
+  border-right: 4px solid var(--light-red);
+}
+.card.selected.mouse-left .card__caption::before {
+  border-top: 6px solid var(--light-red);
+  border-left: 4px solid var(--light-red);
+}
+.card.selected.mouse-left .card__product {
+  border-bottom: 4px solid var(--light-red);
+  border-left: 4px solid var(--light-red);
+  border-right: 4px solid var(--light-red);
+}
+.card.selected.mouse-left .product__weight {
+  background-color: var(--light-red);
+}
+.card.selected.mouse-left .card__desc span {
+  color: var(--light-red);
+  border-bottom: 1px dashed var(--light-red);
+}
+/* selected hover effects */
+
+/* selected */
+
+/* sold */
+.card.sold {
+  cursor: default;
+}
+.card.sold .card__caption {
+  background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1)),
+    #f2f2f2;
+}
+.card.sold .card__caption::before {
+  background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1)),
+    #f2f2f2;
+}
+.card.sold .card__caption span {
+  opacity: 0.5;
+}
+.card.sold .product {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../../assets/img/cat.png");
+  background-repeat: no-repeat;
+  background-position: center center, 50% 230%;
+}
+.card.sold .product__title,
+.card.sold .product__taste,
+.card.sold .product__rations {
+  opacity: 0.5;
+}
+.card.sold .card__caption {
+  border-top: 4px solid var(--light-gray);
+  border-right: 4px solid var(--light-gray);
+}
+.card.sold .card__caption::before {
+  border-top: 6px solid var(--light-gray);
+  border-left: 4px solid var(--light-gray);
+}
+.card.sold .card__product {
+  border-bottom: 4px solid var(--light-gray);
+  border-left: 4px solid var(--light-gray);
+  border-right: 4px solid var(--light-gray);
+}
+.card.sold .product__weight {
+  background-color: var(--light-gray);
+}
+.card.sold .card__desc {
+  color: var(--yellow);
+}
+
+@media screen and (max-width: 1160px) {
+  .card {
+    margin-bottom: 30px;
+  }
+}
