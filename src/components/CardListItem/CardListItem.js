@@ -17,7 +17,7 @@ const CardListItem = ({
 
   let cardClasses = `offers__card card ${!available && "sold"} ${
     isSelected && "selected"
-  } ${isSelected && isMouseOver && "mouse-left"}`;
+  } ${isSelected && available && isMouseOver && "mouse-left"}`;
 
   let captionClasses = `card__caption ${
     isMouseOver && isSelected && "mouse-left"
@@ -51,7 +51,6 @@ const CardListItem = ({
   };
   const mouseOverHandler = () => {
     setIsMouseOver((state) => (state = !state));
-    console.log(isMouseOver);
   };
 
   return (
