@@ -47,10 +47,14 @@ const CardListItem = ({
   };
 
   const selectProduct = () => {
-    setIsSelected((state) => (state = !state));
+    if (available) {
+      setIsSelected((state) => (state = !state));
+    }
   };
   const mouseOverHandler = () => {
-    setIsMouseOver((state) => (state = !state));
+    if (available) {
+      setIsMouseOver((state) => (state = !state));
+    }
   };
 
   return (
